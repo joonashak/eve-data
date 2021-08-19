@@ -1,10 +1,11 @@
 {
   "name": "@eve-data/systems",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "main.js",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/joonashak/eve-data/issues"
   },
-  "homepage": "https://github.com/joonashak/eve-data#readme"
+  "homepage": "https://github.com/joonashak/eve-data#readme",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "files": ["lib/**/*"]
 }
