@@ -45,7 +45,7 @@ jobs:
         run: npm test
       - name: Build package
         working-directory: packages/systems
-        run: npm build
+        run: npm run build
       - name: Publish package
         working-directory: packages/systems
         run: npm publish --access public
