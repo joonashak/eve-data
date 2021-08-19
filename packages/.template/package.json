@@ -1,0 +1,40 @@
+{
+  "name": "@eve-data/package-template",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --watch --config jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joonashak/eve-data.git"
+  },
+  "author": "Joonas Häkkinen <hakkijoo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joonashak/eve-data/issues"
+  },
+  "homepage": "https://github.com/joonashak/eve-data#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.3.5"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}

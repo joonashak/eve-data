@@ -12,6 +12,7 @@ jobs:
     name: Detect changed packages
     # Set job outputs to values from filter step
     outputs:
+      template: ${{ steps.filter.outputs.template }}
       systems: ${{ steps.filter.outputs.systems }}
     steps:
     - uses: actions/checkout@v2
@@ -19,10 +20,32 @@ jobs:
       id: filter
       with:
         filters: |
+          template:
+            - "packages/.template/**"
           systems:
             - "packages/systems/**"
 
   # Test jobs per package.
+  template:
+    name: Test package template
+    needs: changes
+    if: ${{ needs.changes.outputs.template == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        working-directory: packages/.template
+        run: npm ci
+      - name: Run linter
+        working-directory: packages/.template
+        run: npm run lint
+      - name: Run tests
+        working-directory: packages/.template
+        run: npm test
+
   systems:
     name: Test @eve-data/systems
     needs: changes
