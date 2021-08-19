@@ -10,9 +10,11 @@ export default async () => {
     sde: { tempFile },
   } = config;
 
+  const rf = { recursive: true, force: true };
+
   try {
-    await rm(tempFile);
-    await rm(targetDir);
+    await rm(tempFile, rf);
+    await rm(targetDir, rf);
   } catch {}
 
   await mkdir(targetDir);

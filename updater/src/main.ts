@@ -9,9 +9,8 @@ const main = async () => {
   const hrstart = process.hrtime();
 
   await initialize();
-
   await downloadSde();
-
+  return;
   const effects = await getWormholeEffects();
   const effectsStr = JSON.stringify(effects, null, 4);
   await writeFile(`${config.targetDir}/wormholeEffects.json`, effectsStr);
@@ -24,5 +23,3 @@ const main = async () => {
 };
 
 main();
-
-// FIXME: Run without re-downloading SDE.
