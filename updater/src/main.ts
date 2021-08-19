@@ -1,11 +1,15 @@
 import { writeFile } from "fs/promises";
 import config from "./config";
+import initialize from "./filesystem/initialize";
 import { downloadSde } from "./sde";
 import getSystemData from "./systems/systemData";
 import getWormholeEffects from "./wormholeEffects";
 
 const main = async () => {
   const hrstart = process.hrtime();
+
+  await initialize();
+
   await downloadSde();
 
   const effects = await getWormholeEffects();
@@ -21,5 +25,4 @@ const main = async () => {
 
 main();
 
-// FIXME: Fails if target folder does not exist.
 // FIXME: Run without re-downloading SDE.
