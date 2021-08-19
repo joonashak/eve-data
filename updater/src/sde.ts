@@ -3,6 +3,7 @@ import { createWriteStream } from "fs";
 import { unlink } from "fs/promises";
 import { resolve } from "path";
 import unzip from "extract-zip";
+import config from "./config";
 
 /**
  * Download SDE (Static Data Export) from EVE's dev website and save locally.
@@ -10,8 +11,7 @@ import unzip from "extract-zip";
 export const downloadSde = async () => {
   console.log("Downloading SDE.");
 
-  const url = process.env.SDE_DOWNLOAD_URL || "";
-  const res = await axios(url, {
+  const res = await axios(config.sde.downloadUrl, {
     responseType: "stream",
   });
 
@@ -19,13 +19,12 @@ export const downloadSde = async () => {
     throw new Error(res.statusText);
   }
 
-  const tempPath = process.env.SDE_TEMP_FILE || "sde.zip";
-  await res.data.pipe(createWriteStream(tempPath));
+  await res.data.pipe(createWriteStream(config.sde.tempFile));
   await new Promise((resolve) => res.data.on("end", resolve));
 
   console.log("SDE downloaded. Extracting ZIP.");
-  const dir = resolve(process.env.SDE_UNZIP_DIR || "./");
-  await unzip(tempPath, { dir });
-  await unlink(tempPath);
+  const dir = resolve(config.sde.unzipDir);
+  await unzip(config.sde.tempFile, { dir });
+  await unlink(config.sde.tempFile);
   console.log("SDE fetch complete.");
 };

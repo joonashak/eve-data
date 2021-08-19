@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "dotenv": "^10.0.0",
     "extract-zip": "^2.0.1",
     "yaml": "^1.10.2"
   }
