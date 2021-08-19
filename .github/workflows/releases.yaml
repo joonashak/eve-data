@@ -1,0 +1,53 @@
+name: Publish updated packages to NPM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # Run only for changed packages.
+  changes:
+    runs-on: ubuntu-latest
+    name: Detect changed packages
+    # Set job outputs to values from filter step
+    outputs:
+      systems: ${{ steps.filter.outputs.systems }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          systems:
+            - "packages/systems/**"
+
+  # Publish jobs per package.
+  systems:
+    name: Publish @eve-data/systems
+    needs: changes
+    if: ${{ needs.changes.outputs.systems == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install dependencies
+        working-directory: packages/systems
+        run: npm ci
+      - name: Run linter
+        working-directory: packages/systems
+        run: npm run lint
+      - name: Run tests
+        working-directory: packages/systems
+        run: npm test
+      - name: Build package
+        working-directory: packages/systems
+        run: npm build
+      - name: Publish package
+        working-directory: packages/systems
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
