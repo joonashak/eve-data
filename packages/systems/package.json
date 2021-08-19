@@ -1,11 +1,11 @@
 {
   "name": "@eve-data/systems",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf lib && tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\"",
     "test": "jest --config jestconfig.json",
