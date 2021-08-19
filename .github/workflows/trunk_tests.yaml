@@ -1,9 +1,9 @@
-name: testing
+name: Run tests for updated packages
 
 on:
   push:
     branches:
-      - main
+      - trunk
 
 jobs:
   # Run only for changed packages.
@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node_version: "16"
+          node-version: "16"
       - name: Install dependencies
         working-directory: packages/systems
         run: npm ci
