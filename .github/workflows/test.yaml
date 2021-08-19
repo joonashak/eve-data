@@ -12,8 +12,6 @@ jobs:
     name: Detect changed packages
     # Set job outputs to values from filter step
     outputs:
-      #backend: ${{ steps.filter.outputs.backend }}
-      #frontend: ${{ steps.filter.outputs.frontend }}
       systems: ${{ steps.filter.outputs.systems }}
     steps:
     - uses: actions/checkout@v2
@@ -23,11 +21,6 @@ jobs:
         filters: |
           systems:
             - "packages/systems/**"
-        #filters: |
-        #  backend:
-        #    - 'backend/**'
-        #  frontend:
-        #    - 'frontend/**'
 
   # Test jobs per package.
   systems:
@@ -40,9 +33,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node_version: "16"
-      - working-directory: packages/systems
+      - name: Install dependencies
+        working-directory: packages/systems
         run: npm ci
-      - working-directory: packages/systems
+      - name: Run linter
+        working-directory: packages/systems
         run: npm run lint
-      - working-directory: packages/systems
+      - name: Run tests
+        working-directory: packages/systems
         run: npm test
