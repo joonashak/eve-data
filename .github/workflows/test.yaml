@@ -29,7 +29,7 @@ jobs:
         #  frontend:
         #    - 'frontend/**'
 
-  # JOB to build and test backend code
+  # Test jobs per package.
   systems:
     name: Test @eve-data/systems
     needs: changes
@@ -37,4 +37,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo "Change detected in @eve-data/systems"
+      - uses: actions/setup-node@v2
+      - run: npm lint
+      - run: npm test
