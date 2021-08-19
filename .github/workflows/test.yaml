@@ -1,0 +1,39 @@
+name: testing
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # Run only for changed packages.
+  changes:
+    runs-on: ubuntu-latest
+    name: Detect changed packages
+    # Set job outputs to values from filter step
+    outputs:
+      #backend: ${{ steps.filter.outputs.backend }}
+      #frontend: ${{ steps.filter.outputs.frontend }}
+      systems: ${{ steps.filter.outputs.systems }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          systems:
+            - "packages/systems/**"
+        #filters: |
+        #  backend:
+        #    - 'backend/**'
+        #  frontend:
+        #    - 'frontend/**'
+
+  # JOB to build and test backend code
+  systems:
+    needs: changes
+    if: ${{ needs.changes.outputs.systems == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "Change detected in @eve-data/systems"
