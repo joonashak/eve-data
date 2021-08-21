@@ -1,4 +1,5 @@
 import { writeFile } from "fs/promises";
+import path from "path";
 import config from "./config";
 import copyToPackages from "./filesystem/copyToPackages";
 import initialize from "./filesystem/initialize";
@@ -14,14 +15,14 @@ const main = async () => {
   const effects = await getWormholeEffects();
   const effectsStr = JSON.stringify(effects, null, 4);
   await writeFile(
-    [config.targetDir, config.dataFiles.wormholeEffects.name].join("/"),
+    path.join(config.targetDir, config.dataFiles.wormholeEffects.name),
     effectsStr
   );
 
   const systemData = await getSystemData();
   const systemDataStr = JSON.stringify(systemData, null, 4);
   await writeFile(
-    [config.targetDir, config.dataFiles.systems.name].join("/"),
+    path.join(config.targetDir, config.dataFiles.systems.name),
     systemDataStr
   );
 
