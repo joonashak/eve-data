@@ -1,2 +1,3 @@
-export const printMsg = () => console.log("This is a message from the demo package (TS)");
-// Random chaange.
+import systems from "../assets/systems.json";
+
+export const getSystems = () => systems;
