@@ -11,11 +11,11 @@ export default async () => {
 
   for (const file of Object.values(dataFiles)) {
     const { name, targets } = file;
-    const src = path.join(targetDir, name).concat(".dat");
+    const src = path.join(targetDir, name).concat(".json");
     for (const target of targets) {
       await rmrf(target);
       await mkdir(target, { recursive: true });
-      const dest = path.join(target, name).concat(".dat");
+      const dest = path.join(target, name).concat(".json");
       await copyFile(src, dest);
     }
   }
