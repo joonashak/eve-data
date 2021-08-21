@@ -1,8 +1,7 @@
-import { writeFile } from "fs/promises";
-import path from "path";
 import config from "./config";
 import copyToPackages from "./filesystem/copyToPackages";
 import initialize from "./filesystem/initialize";
+import writeData from "./filesystem/writeData";
 import { downloadSde } from "./sde";
 import getSystemData from "./systems/systemData";
 import getWormholeEffects from "./wormholeEffects";
@@ -13,18 +12,10 @@ const main = async () => {
   await downloadSde();
 
   const effects = await getWormholeEffects();
-  const effectsStr = JSON.stringify(effects, null, 4);
-  await writeFile(
-    path.join(config.targetDir, config.dataFiles.wormholeEffects.name),
-    effectsStr
-  );
+  await writeData(config.dataFiles.wormholeEffects.name, effects);
 
   const systemData = await getSystemData();
-  const systemDataStr = JSON.stringify(systemData, null, 4);
-  await writeFile(
-    path.join(config.targetDir, config.dataFiles.systems.name),
-    systemDataStr
-  );
+  await writeData(config.dataFiles.systems.name, systemData);
 
   await copyToPackages();
 

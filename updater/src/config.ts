@@ -22,9 +22,9 @@ const config: Config = {
   },
   targetDir: "./data",
   dataFiles: {
-    wormholeEffects: { name: "wormholeEffects.json", targets: [] },
+    wormholeEffects: { name: "wormholeEffects", targets: [] },
     systems: {
-      name: "systems.json",
+      name: "systems",
       targets: ["../packages/systems/assets"],
     },
   },
