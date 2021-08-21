@@ -1,9 +1,9 @@
 {
   "name": "@eve-data/systems",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "",
-  "main": "lib/main.js",
-  "types": "lib/main.d.ts",
+  "main": "lib/src/main.js",
+  "types": "lib/src/main.d.ts",
   "scripts": {
     "build": "rm -rf lib && tsc",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -34,8 +34,7 @@
     "typescript": "^4.3.5"
   },
   "files": [
-    "lib/**/*",
-    "assets/**/*"
+    "lib/**/*"
   ],
   "dependencies": {
     "@msgpack/msgpack": "^2.7.0"
