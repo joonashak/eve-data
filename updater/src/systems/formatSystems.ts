@@ -35,7 +35,7 @@ export default (
 
     return {
       name,
-      systemEsiId: solarSystemID,
+      id: solarSystemID,
       securityStatus: security,
       securityClass,
       effectId,

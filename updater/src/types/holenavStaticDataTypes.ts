@@ -6,6 +6,6 @@ export type HolenavSystem = {
   name: string;
   securityStatus: number;
   securityClass: string;
-  systemEsiId: number;
+  id: number;
   effectId: number | null;
 };
