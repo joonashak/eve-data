@@ -21,7 +21,7 @@ const main = async () => {
   const systemData = await getSystemData();
   const systemDataStr = JSON.stringify(systemData, null, 4);
   await writeFile(
-    [config.targetDir, config.dataFiles.wormholeEffects.name].join("/"),
+    [config.targetDir, config.dataFiles.systems.name].join("/"),
     systemDataStr
   );
 
