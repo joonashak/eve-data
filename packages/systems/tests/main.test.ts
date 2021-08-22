@@ -1,6 +1,4 @@
-import { getSystems } from "../src/main";
-
-const systems = getSystems();
+import systems from "../src/main";
 
 test("Number of systems", () => {
   expect(systems.length).toBe(8035);
