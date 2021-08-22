@@ -11,11 +11,10 @@ export type System = {
    * Exact security status.
    */
   securityStatus: number;
-  // TODO: Improve securityClass type.
   /**
    * Security classification.
    */
-  securityClass: string;
+  securityClass: "NULL" | "WH" | "HIGH" | "LOW";
   /**
    * Effect id for wormhole systems, `null` for others.
    */
@@ -24,9 +23,8 @@ export type System = {
    * Region ESI ID.
    */
   regionId: number;
-  // TODO: Improve whClass type.
   /**
    * Class (1-6) for wormhole systems, `null` for others.
    */
-  whClass: number | null;
+  whClass: 1 | 2 | 3 | 4 | 5 | 6 | null;
 };
