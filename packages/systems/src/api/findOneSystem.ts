@@ -9,7 +9,7 @@ import { System } from "./system.type";
  * one search property must be provided. Example: `{ name: "Jita" }`
  * @returns {System} Star system data.
  */
-export default (search: XOR<{ name: string }, { id: string }>): System => {
+export default (search: XOR<{ name: string }, { id: number }>): System => {
   const keys = Object.keys(search);
   if (keys.length !== 1) {
     throw new Error("Search object must contain exactly one property.");

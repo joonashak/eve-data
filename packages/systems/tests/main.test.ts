@@ -17,7 +17,7 @@ test("Find by name", () => {
 });
 
 test("Find by ID", () => {
-  expect(findOneSystem({ name: "J210519" })).toEqual({
+  expect(findOneSystem({ id: 31002338 })).toEqual({
     effectId: 30853,
     id: 31002338,
     name: "J210519",
