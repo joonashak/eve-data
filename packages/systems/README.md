@@ -10,6 +10,10 @@ This library is a part of the [`@eve-data` project](https://github.com/joonashak
 
 ## Usage
 
+```bash
+npm i @eve-data/systems
+```
+
 ### All data
 
 ```typescript
