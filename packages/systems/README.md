@@ -6,7 +6,7 @@ This library can be used in browsers as well as with Node. The data gzips well w
 
 ## The `@eve-data` project
 
-This library is a part of the [`@eve-data` project](../../), please see the [README](../../README.md) for more information.
+This library is a part of the [`@eve-data` project](https://github.com/joonashak/eve-data), please see the [README](https://github.com/joonashak/eve-data#readme) for more information.
 
 ## Usage
 
