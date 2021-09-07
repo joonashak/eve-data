@@ -2,13 +2,13 @@
 
 Rudimentary tool to generate the static data required by Holenav from EVE Static Data Export (SDE).
 
-## Commands
-
-Generate data files:
+## Usage
 
 ```bash
-npm run generate
+npm run update
 ```
+
+To use arguments, add `--` and your arguments, e.g., `npm run update -- -d`. To see the list of possible arguments, run `npm run update -- --help`.
 
 ## Caveats
 
