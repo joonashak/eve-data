@@ -1,1 +1,5 @@
-export const printMsg = () => console.log("Hello, @eve-data package template!");
+import data from "../assets/wormholes.json";
+
+const wormholes = data;
+
+export default wormholes;

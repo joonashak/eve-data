@@ -1,0 +1,1130 @@
+[
+    {
+        "type": "A009",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 13
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 5000000
+        }
+    },
+    {
+        "type": "A239",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "A641",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "A982",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "B041",
+        "lifetimeHrs": 48,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "B274",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "B449",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "B520",
+        "lifetimeHrs": 48,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "B735",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 15
+        },
+        "mass": {
+            "total": 750000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "C008",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 5000000
+        }
+    },
+    {
+        "type": "C125",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 2
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "C140",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "C247",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 3
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "C248",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "C391",
+        "lifetimeHrs": 48,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "C414",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 17
+        },
+        "mass": {
+            "total": 750000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "C729",
+        "lifetimeHrs": 12,
+        "destination": {
+            "type": "TRIG",
+            "whClass": null
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 410000000
+        }
+    },
+    {
+        "type": "D364",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 2
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "D382",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 2
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "D792",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "D845",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 5000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "E004",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 1
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 5000000
+        }
+    },
+    {
+        "type": "E175",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "E545",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "E587",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "F135",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "THERA",
+            "whClass": null
+        },
+        "mass": {
+            "total": 750000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "F216",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "TRIG",
+            "whClass": null
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "F353",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "THERA",
+            "whClass": null
+        },
+        "mass": {
+            "total": 100000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "G008",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 5000000
+        }
+    },
+    {
+        "type": "G024",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 2
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "H121",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 1
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "H296",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "H900",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "I182",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 2
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "J244",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "K329",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 5000000000,
+            "jump": 1800000000
+        }
+    },
+    {
+        "type": "K346",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "L005",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 2
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 5000000
+        }
+    },
+    {
+        "type": "L031",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "THERA",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "L477",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 3
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "L614",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "M001",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 5000000
+        }
+    },
+    {
+        "type": "M164",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "THERA",
+            "whClass": null
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "M267",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 3
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "M555",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "M609",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "N062",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "N110",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "N290",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1800000000
+        }
+    },
+    {
+        "type": "N432",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "N766",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 2
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "N770",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "N944",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "N968",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 3
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "O128",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "O477",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 3
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "O883",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 3
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "P060",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 1
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "Q003",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 5000000
+        }
+    },
+    {
+        "type": "Q063",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "Q317",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 1
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "R051",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "R081",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "R259",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 18
+        },
+        "mass": {
+            "total": 750000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "R474",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "R943",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 2
+        },
+        "mass": {
+            "total": 750000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "S047",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "HIGH",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "S199",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "S804",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "S877",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 14
+        },
+        "mass": {
+            "total": 750000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "T405",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "T458",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "THERA",
+            "whClass": null
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "U210",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "U319",
+        "lifetimeHrs": 48,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1800000000
+        }
+    },
+    {
+        "type": "U372",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "TRIG",
+            "whClass": null
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "U574",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "V283",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1000000000
+        }
+    },
+    {
+        "type": "V301",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 1
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "V753",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "V898",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "LOW",
+            "whClass": null
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "V911",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 5
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "V928",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 16
+        },
+        "mass": {
+            "total": 750000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "W237",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 6
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "X450",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "X702",
+        "lifetimeHrs": 24,
+        "destination": {
+            "type": "WH",
+            "whClass": 3
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "X877",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "Y683",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "Y790",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 1
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "Z006",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 3
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 5000000
+        }
+    },
+    {
+        "type": "Z060",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 1000000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "Z142",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "NULL",
+            "whClass": null
+        },
+        "mass": {
+            "total": 3000000000,
+            "jump": 1350000000
+        }
+    },
+    {
+        "type": "Z457",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 4
+        },
+        "mass": {
+            "total": 2000000000,
+            "jump": 300000000
+        }
+    },
+    {
+        "type": "Z647",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 1
+        },
+        "mass": {
+            "total": 500000000,
+            "jump": 20000000
+        }
+    },
+    {
+        "type": "Z971",
+        "lifetimeHrs": 16,
+        "destination": {
+            "type": "WH",
+            "whClass": 1
+        },
+        "mass": {
+            "total": 100000000,
+            "jump": 20000000
+        }
+    }
+]
