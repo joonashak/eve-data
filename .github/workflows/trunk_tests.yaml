@@ -70,7 +70,7 @@ jobs:
         run: npm test
 
   wormholes:
-    name: Test package template
+    name: Test @eve-data/wormholes
     needs: changes
     if: ${{ needs.changes.outputs.wormholes == 'true' }}
     runs-on: ubuntu-latest
