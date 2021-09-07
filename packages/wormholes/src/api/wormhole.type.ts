@@ -1,3 +1,10 @@
+export type SystemType = {
+  // FIXME: This does not work?!
+  // type: "HIGH" | "LOW" | "NULL" | "WH" | "TRIG" | "THERA";
+  type: string | "HIGH" | "LOW" | "NULL" | "WH" | "TRIG" | "THERA";
+  whClass: number | null;
+};
+
 export type Wormhole = {
   /**
    * Wormhole type.
@@ -8,12 +15,13 @@ export type Wormhole = {
    */
   lifetimeHrs: number;
   /**
-   * Destination system.
+   * Destination system type.
    */
-  destination: {
-    type: "HIGH" | "LOW" | "NULL" | "WH" | "TRIG" | "THERA";
-    whClass: number | null;
-  };
+  destination: SystemType;
+  /**
+   * Types of systems where this wormhole can originate from.
+   */
+  origins: SystemType[];
   /**
    * Mass properties.
    */
