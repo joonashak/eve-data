@@ -1,6 +1,8 @@
 import { opendir, readFile } from "fs/promises";
 import { resolve } from "path";
 import { parse as parseYaml } from "yaml";
+import config from "../config";
+import writeData from "../filesystem/writeData";
 import { SdeName, SdeSystem } from "../types/sdeTypes";
 import formatSystems from "./formatSystems";
 
@@ -99,11 +101,11 @@ const traverseUniverse = async (path: string): Promise<any> => {
 /**
  * Get data for all planetary systems in SDE.
  */
-export default async () => {
+export default async (): Promise<void> => {
   const kSpaceSystems = await traverseUniverse("sde/fsd/universe/eve");
   const wSpaceSystems = await traverseUniverse("sde/fsd/universe/wormhole");
   const systemsRaw = kSpaceSystems.concat(wSpaceSystems);
   const names = await getSystemNames(systemsRaw);
   const systems = formatSystems(systemsRaw, names);
-  return systems;
+  await writeData(config.dataFiles.systems.name, systems);
 };

@@ -1,7 +1,9 @@
 import { readFile } from "fs/promises";
 import { parse as parseYaml } from "yaml";
+import config from "./config";
+import writeData from "./filesystem/writeData";
 
-export default async () => {
+export default async (): Promise<void> => {
   const effectsYaml = await readFile("assets/wormholeEffects.yaml", {
     encoding: "utf8",
   });
@@ -16,5 +18,5 @@ export default async () => {
     {}
   );
 
-  return effects;
+  await writeData(config.dataFiles.wormholeEffects.name, effects);
 };
