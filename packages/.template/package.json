@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.1",
   "description": "",
-  "main": "lib/main.js",
-  "types": "lib/main.d.ts",
+  "main": "lib/src/main.js",
+  "types": "lib/src/main.d.ts",
   "scripts": {
     "build": "rm -rf lib && tsc",
     "format": "prettier --write \"src/**/*.ts\"",
