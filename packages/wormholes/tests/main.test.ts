@@ -1,6 +1,5 @@
-import { printMsg } from "../src/main";
+import wormholes from "../src/main";
 
-test("asd", () => {
-  printMsg();
-  expect(true).toBe(true);
+test("Length", () => {
+  expect(wormholes.length).toBe(94);
 });
