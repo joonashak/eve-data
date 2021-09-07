@@ -13,6 +13,7 @@ jobs:
     # Set job outputs to values from filter step
     outputs:
       systems: ${{ steps.filter.outputs.systems }}
+      wormholes: ${{ steps.filter.outputs.wormholes }}
     steps:
     - uses: actions/checkout@v2
     - uses: dorny/paths-filter@v2
@@ -21,6 +22,8 @@ jobs:
         filters: |
           systems:
             - "packages/systems/**"
+          wormholes:
+            - "packages/wormholes/**"
 
   # Publish jobs per package.
   systems:
@@ -48,6 +51,35 @@ jobs:
         run: npm run build
       - name: Publish package
         working-directory: packages/systems
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  wormholes:
+    name: Publish @eve-data/wormholes
+    needs: changes
+    if: ${{ needs.changes.outputs.wormholes == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install dependencies
+        working-directory: packages/wormholes
+        run: npm ci
+      - name: Run linter
+        working-directory: packages/wormholes
+        run: npm run lint
+      - name: Run tests
+        working-directory: packages/wormholes
+        run: npm test
+      - name: Build package
+        working-directory: packages/wormholes
+        run: npm run build
+      - name: Publish package
+        working-directory: packages/wormholes
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

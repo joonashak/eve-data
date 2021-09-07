@@ -14,6 +14,7 @@ jobs:
     outputs:
       template: ${{ steps.filter.outputs.template }}
       systems: ${{ steps.filter.outputs.systems }}
+      wormholes: ${{ steps.filter.outputs.wormholes }}
     steps:
     - uses: actions/checkout@v2
     - uses: dorny/paths-filter@v2
@@ -24,6 +25,8 @@ jobs:
             - "packages/.template/**"
           systems:
             - "packages/systems/**"
+          wormholes:
+            - "packages/wormholes/**"
 
   # Test jobs per package.
   template:
@@ -64,4 +67,24 @@ jobs:
         run: npm run lint
       - name: Run tests
         working-directory: packages/systems
+        run: npm test
+
+  wormholes:
+    name: Test package template
+    needs: changes
+    if: ${{ needs.changes.outputs.wormholes == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        working-directory: packages/wormholes
+        run: npm ci
+      - name: Run linter
+        working-directory: packages/wormholes
+        run: npm run lint
+      - name: Run tests
+        working-directory: packages/wormholes
         run: npm test
