@@ -11485,7 +11485,7 @@
     {
         "name": "Embod",
         "id": 30023410,
-        "securityStatus": 0.9607494002658415,
+        "securityStatus": 0.960749400266,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000042,
@@ -22195,7 +22195,7 @@
     {
         "name": "Malukker",
         "id": 30012505,
-        "securityStatus": 0.9880116745402241,
+        "securityStatus": 0.98801167454,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000030,
@@ -22537,7 +22537,7 @@
     {
         "name": "Hadaugago",
         "id": 30012547,
-        "securityStatus": 0.9487719646441248,
+        "securityStatus": 0.948771964644,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000030,
@@ -24760,7 +24760,7 @@
     {
         "name": "Trossere",
         "id": 30042715,
-        "securityStatus": 0.9144102725918363,
+        "securityStatus": 0.914410272592,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000032,
@@ -26254,7 +26254,7 @@
     {
         "name": "Pasha",
         "id": 30021672,
-        "securityStatus": 0.9143491954941014,
+        "securityStatus": 0.914349195494,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000020,
@@ -27964,7 +27964,7 @@
     {
         "name": "Clellinon",
         "id": 30045305,
-        "securityStatus": 0.848465929327211,
+        "securityStatus": 0.848465929327,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000068,
@@ -31339,7 +31339,7 @@
     {
         "name": "Couster",
         "id": 30014971,
-        "securityStatus": 0.9024608884519887,
+        "securityStatus": 0.902460888452,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000064,
@@ -31672,7 +31672,7 @@
     {
         "name": "Akiainavas",
         "id": 30011407,
-        "securityStatus": 0.7452549433180888,
+        "securityStatus": 0.745254943318,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000016,
@@ -32149,7 +32149,7 @@
     {
         "name": "Jouvulen",
         "id": 30011392,
-        "securityStatus": 0.8897628517610554,
+        "securityStatus": 0.889762851761,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000016,
@@ -34678,7 +34678,7 @@
     {
         "name": "Uitra",
         "id": 30030141,
-        "securityStatus": 0.9240960029643324,
+        "securityStatus": 0.924096002964,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000002,
@@ -38089,7 +38089,7 @@
     {
         "name": "Conoban",
         "id": 30045042,
-        "securityStatus": 0.9052488000278315,
+        "securityStatus": 0.905248800028,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000065,
@@ -43525,7 +43525,7 @@
     {
         "name": "Deepari",
         "id": 30013489,
-        "securityStatus": 0.9141726348782315,
+        "securityStatus": 0.914172634878,
         "securityClass": "HIGH",
         "effectId": null,
         "regionId": 10000043,
