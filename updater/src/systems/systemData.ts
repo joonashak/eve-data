@@ -19,11 +19,16 @@ const namesById = async (min: number, max: number) => {
     ({ itemID }: SdeName) => itemID >= min && itemID <= max
   );
 
-  return items.reduce(
-    (names: any, { itemID, itemName }: SdeName) =>
-      Object.assign(names, { [itemID]: itemName }),
-    {}
-  );
+  return items.reduce((names: any, { itemID, itemName }: SdeName) => {
+    // FIXME: Quick and dirty fix for a single system name that is correct in data but gets parsed as zero.
+    if (itemID === 30003270) {
+      itemName = "6E-578";
+    }
+    if (itemName === "0") {
+      throw new Error(`Parsing system name failed for ID ${itemID}`);
+    }
+    return Object.assign(names, { [itemID]: itemName });
+  }, {});
 };
 
 const getSystemNames = async (systems: SdeSystem[]) => {
