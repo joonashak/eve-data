@@ -8,7 +8,7 @@ Static data from the game [EVE Online](https://www.eveonline.com/), offered as a
 
 Name|Description|Current Version
 -|-|-
-`@eve-data/systems`|Star Systems|`1.0.0`
+`@eve-data/systems`|Star Systems|`1.0.3`
 
 ## Contributing
 
