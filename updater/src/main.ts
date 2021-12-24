@@ -9,8 +9,6 @@ const main = async () => {
   await downloadSde();
 
   await createSelectedFiles();
-
-  // FIXME: Does not work with createSelectedFiles if all files are not generated.
   await copyToPackages();
 
   console.log(`\nTOOK ${process.hrtime(hrstart)[0]} s`);
