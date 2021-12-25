@@ -1,7 +1,8 @@
 import { readFile } from "fs/promises";
 import { parse as parseYaml } from "yaml";
-import config from "./config";
-import writeData from "./filesystem/writeData";
+import config from "../config";
+import writeData from "../filesystem/writeData";
+import getSignedStrength from "./getSignedStrength";
 
 const parseEffects = (traits: any) =>
   traits.miscBonuses.map(({ bonus, bonusText, isPositive }: any) => {
@@ -9,7 +10,8 @@ const parseEffects = (traits: any) =>
     const description = desc[0].toUpperCase() + desc.slice(1);
 
     return {
-      strength: isPositive ? bonus : bonus * -1,
+      strength: getSignedStrength(bonus, desc),
+      isPositive,
       description,
     };
   });

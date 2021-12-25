@@ -1,6 +1,6 @@
 import argv from "./args";
 import systemData from "./systems/systemData";
-import wormholeEffects from "./wormholeEffects";
+import wormholeEffects from "./wormholeEffects/wormholeEffects";
 
 const createFileFunctions: { [key: string]: () => Promise<void> } = {
   systems: systemData,
