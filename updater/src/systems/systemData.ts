@@ -111,6 +111,6 @@ export default async (): Promise<void> => {
   const wSpaceSystems = await traverseUniverse("sde/fsd/universe/wormhole");
   const systemsRaw = kSpaceSystems.concat(wSpaceSystems);
   const names = await getSystemNames(systemsRaw);
-  const systems = formatSystems(systemsRaw, names);
+  const systems = await formatSystems(systemsRaw, names);
   await writeData(config.dataFiles.systems.name, systems);
 };

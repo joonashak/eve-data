@@ -1,5 +1,6 @@
 import { HolenavSystem } from "../types/holenavStaticDataTypes";
 import { SdeSystemExtended } from "../types/sdeTypes";
+import wormholeEffects from "../wormholeEffects/wormholeEffects";
 
 enum SecurityClass {
   High = "HIGH",
@@ -23,24 +24,28 @@ const securityClassFromStatus = (securityStatus: number) => {
   return SecurityClass.Wormhole;
 };
 
-export default (
+export default async (
   systems: SdeSystemExtended[],
   systemNames: any
-): HolenavSystem[] =>
-  systems.map((system) => {
+): Promise<HolenavSystem[]> => {
+  const effects = await wormholeEffects();
+
+  return systems.map((system) => {
     const { solarSystemID, security, secondarySun, regionId, whClass } = system;
     const name = systemNames[solarSystemID];
     const securityClass = securityClassFromStatus(security);
     const effectId = secondarySun?.effectBeaconTypeID || null;
+    const effect = effectId ? effects[effectId.toString()] : null;
 
     return {
       name,
       id: solarSystemID,
       securityStatus: security,
       securityClass,
-      effectId,
+      effect,
       regionId,
       // Some k-space systems have a wh class set in SDE...
       whClass: securityClass === SecurityClass.Wormhole ? whClass : null,
     };
   });
+};

@@ -16,7 +16,7 @@ const parseEffects = (traits: any) =>
     };
   });
 
-export default async (): Promise<void> => {
+export default async (): Promise<any> => {
   const effectsYaml = await readFile("assets/wormholeEffects.yaml", {
     encoding: "utf8",
   });
@@ -36,4 +36,5 @@ export default async (): Promise<void> => {
   );
 
   await writeData(config.dataFiles.wormholeEffects.name, effects);
+  return effects;
 };

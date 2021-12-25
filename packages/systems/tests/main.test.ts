@@ -6,7 +6,7 @@ test("Number of systems", () => {
 
 test("Find by name", () => {
   expect(findOneSystem({ name: "Jita" })).toEqual({
-    effectId: null,
+    effect: null,
     id: 30000142,
     name: "Jita",
     regionId: 10000002,
@@ -18,12 +18,65 @@ test("Find by name", () => {
 
 test("Find by ID", () => {
   expect(findOneSystem({ id: 31002338 })).toEqual({
-    effectId: 30853,
-    id: 31002338,
     name: "J210519",
-    regionId: 11000029,
-    securityClass: "WH",
+    id: 31002338,
     securityStatus: -0.99,
+    securityClass: "WH",
+    effect: {
+      id: "30853",
+      name: "Class 5 Black Hole",
+      effects: [
+        {
+          strength: 43,
+          isPositive: true,
+          description: {
+            long: "Bonus to missile velocity",
+            short: "Missile Velocity",
+          },
+        },
+        {
+          strength: 43,
+          isPositive: false,
+          description: {
+            long: "Penalty to ship agility",
+            short: "Ship Inertia",
+          },
+        },
+        {
+          strength: -43,
+          isPositive: false,
+          description: {
+            long: "Penalty to stasis webifier strength",
+            short: "Stasis Webifier Strength",
+          },
+        },
+        {
+          strength: 86,
+          isPositive: true,
+          description: {
+            long: "Bonus to ship velocity",
+            short: "Ship Velocity",
+          },
+        },
+        {
+          strength: 86,
+          isPositive: true,
+          description: {
+            long: "Bonus to maximum targeting range",
+            short: "Targeting Range",
+          },
+        },
+        {
+          strength: 86,
+          isPositive: true,
+          description: {
+            long: "Bonus to missile explosion velocity",
+            short: "Missile Explosion Velocity",
+          },
+        },
+      ],
+    },
+    regionId: 11000029,
     whClass: 5,
   });
 });
