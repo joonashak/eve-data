@@ -2,17 +2,17 @@ import { readFile } from "fs/promises";
 import { parse as parseYaml } from "yaml";
 import config from "../config";
 import writeData from "../filesystem/writeData";
+import getEffectDescription from "./getEffectDescription";
 import getSignedStrength from "./getSignedStrength";
 
 const parseEffects = (traits: any) =>
   traits.miscBonuses.map(({ bonus, bonusText, isPositive }: any) => {
     const desc = bonusText.en;
-    const description = desc[0].toUpperCase() + desc.slice(1);
 
     return {
       strength: getSignedStrength(bonus, desc),
       isPositive,
-      description,
+      description: getEffectDescription(desc),
     };
   });
 
