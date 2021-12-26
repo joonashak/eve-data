@@ -5,7 +5,7 @@ import writeData from "../filesystem/writeData";
 import getEffectDescription from "./getEffectDescription";
 import getSignedStrength from "./getSignedStrength";
 
-const parseEffects = (traits: any) =>
+const parseTraits = (traits: any) =>
   traits.miscBonuses.map(({ bonus, bonusText, isPositive }: any) => {
     const desc = bonusText.en;
 
@@ -28,7 +28,7 @@ export default async (): Promise<any> => {
       acc[key] = {
         id: key,
         name: val.name.en.replace(/ Effects$/, ""),
-        effects: parseEffects(val.traits),
+        traits: parseTraits(val.traits),
       };
       return acc;
     },
