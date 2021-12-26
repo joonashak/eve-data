@@ -25,7 +25,7 @@ test("Find by ID", () => {
     effect: {
       id: "30853",
       name: "Class 5 Black Hole",
-      effects: [
+      traits: [
         {
           strength: 43,
           isPositive: true,
