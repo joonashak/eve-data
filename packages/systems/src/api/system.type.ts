@@ -42,9 +42,14 @@ export type WormholeEffect = {
   id: number;
 
   /**
-   * Effect name including system class.
+   * Effect name.
    */
   name: string;
+
+  /**
+   * Effect class (1-6).
+   */
+  whClass: 1 | 2 | 3 | 4 | 5 | 6;
 
   /**
    * List of the effect's traits, that is, the actual effects on your ship.

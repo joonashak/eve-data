@@ -1,11 +1,19 @@
 # CHANGELOG
 
+## v2.1.1 (2022-01-02)
+
+### Fixes
+
+- Add missing type for `effect.whClass`.
+
 ## v2.1.0 (2022-01-02)
+
+### Changes
 
 - Remove wormhole system class prefix from `effect.name` strings.
 - Add wormhole system class as `effect.whClass` (number).
 
-### Before
+#### Before
 
 ```typescript
 {
@@ -15,7 +23,7 @@
 }
 ```
 
-### After
+#### After
 
 ```typescript
 {
