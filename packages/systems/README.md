@@ -66,7 +66,8 @@ const wh = findOneSystem({ name: "J211817" });
 console.log(wh.effect);
 //        {
 //            "id": "30867",
-//            "name": "Class 4 Pulsar",
+//            "name": "Pulsar",
+//            "whClass": 4,
 //            "traits": [
 //                {
 //                    "strength": -36,

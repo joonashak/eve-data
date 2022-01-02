@@ -24,7 +24,8 @@ test("Find by ID", () => {
     securityClass: "WH",
     effect: {
       id: "30853",
-      name: "Class 5 Black Hole",
+      name: "Black Hole",
+      whClass: 5,
       traits: [
         {
           strength: 43,
