@@ -30,9 +30,13 @@ export type System = {
   regionId: number;
 
   /**
-   * Class (1-6) for wormhole systems, `null` for others.
+   * Class (1-6) for wormhole systems
+   * Class 12 for Thera
+   * Class 13 for Shattered systems
+   * Class 25 for Pochven
+   * `null` for others.
    */
-  whClass: 1 | 2 | 3 | 4 | 5 | 6 | null;
+  whClass: 1 | 2 | 3 | 4 | 5 | 6 | 12 | 13 | 25 | null;
 };
 
 export type WormholeEffect = {
