@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v2.1.2 (2022-01-21)
+
+### Fixes
+
+- Add missing wormhole classes and export types ([PR #2](https://github.com/joonashak/eve-data/pull/2)).
+- Add missing license files.
+
 ## v2.1.1 (2022-01-02)
 
 ### Fixes
