@@ -28,7 +28,8 @@ console.log(systems);
 //         "securityClass": "NULL",
 //         "effect": null,
 //         "regionId": 10000041,
-//         "whClass": null
+//         "whClass": null,
+//         "staticConnections": []
 //     },
 //     ...
 // ]

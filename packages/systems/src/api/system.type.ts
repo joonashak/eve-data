@@ -37,6 +37,12 @@ export type System = {
    * `null` for others.
    */
   whClass: 1 | 2 | 3 | 4 | 5 | 6 | 12 | 13 | 25 | null;
+
+  /**
+   * Static connections of a wormhole system.
+   * Strings are four-character wormhole codes, e.g., "B274".
+   */
+  staticConnections: string[];
 };
 
 export type WormholeEffect = {

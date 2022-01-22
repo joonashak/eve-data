@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v2.2.0 (2022-01-22)
+
+### Additions
+
+- Add wormhole systems' static connections as `staticConnections`.
+
 ## v2.1.2 (2022-01-21)
 
 ### Fixes
