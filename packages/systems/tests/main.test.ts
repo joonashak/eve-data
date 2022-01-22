@@ -13,6 +13,7 @@ test("Find by name", () => {
     securityClass: "HIGH",
     securityStatus: 0.9459131166648389,
     whClass: null,
+    staticConnections: [],
   });
 });
 
@@ -79,5 +80,6 @@ test("Find by ID", () => {
     },
     regionId: 11000029,
     whClass: 5,
+    staticConnections: ["E175"],
   });
 });
