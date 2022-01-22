@@ -1,3 +1,4 @@
+import wormholeStatics from "../../assets/wormholeStatics";
 import { HolenavSystem } from "../types/holenavStaticDataTypes";
 import { SdeSystemExtended } from "../types/sdeTypes";
 import wormholeEffects from "../wormholeEffects/wormholeEffects";
@@ -24,6 +25,13 @@ const securityClassFromStatus = (securityStatus: number) => {
   return SecurityClass.Wormhole;
 };
 
+const getStatics = (name: string): string[] => {
+  if (Object.keys(wormholeStatics).includes(name)) {
+    return wormholeStatics[name as keyof typeof wormholeStatics];
+  }
+  return [];
+};
+
 export default async (
   systems: SdeSystemExtended[],
   systemNames: any
@@ -37,6 +45,8 @@ export default async (
     const effectId = secondarySun?.effectBeaconTypeID || null;
     const effect = effectId ? effects[effectId.toString()] : null;
 
+    const isWormhole = securityClass === SecurityClass.Wormhole;
+
     return {
       name,
       id: solarSystemID,
@@ -45,7 +55,8 @@ export default async (
       effect,
       regionId,
       // Some k-space systems have a wh class set in SDE...
-      whClass: securityClass === SecurityClass.Wormhole ? whClass : null,
+      whClass: isWormhole ? whClass : null,
+      staticConnections: getStatics(name),
     };
   });
 };
