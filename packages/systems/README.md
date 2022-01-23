@@ -28,6 +28,10 @@ console.log(systems);
 //         "securityClass": "NULL",
 //         "effect": null,
 //         "regionId": 10000041,
+//         "region": {
+//             "id": 10000041,
+//             "name": "Syndicate"
+//         },
 //         "whClass": null,
 //         "staticConnections": []
 //     },

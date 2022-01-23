@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v2.2.1 (2022-01-23)
+
+### Additions
+
+- Add `region` object with region names as `region.name`. (The property `regionId` is now a redundant duplicate and `region.id` should be used instead. `regionId` will be removed in `v3`.)
+
 ## v2.2.0 (2022-01-22)
 
 ### Additions
