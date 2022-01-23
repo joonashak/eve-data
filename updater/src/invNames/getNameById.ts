@@ -22,9 +22,15 @@ export const readInvNamesIntoMemory = async (): Promise<void> => {
   await getAllInvNames();
 };
 
-const getNameById = async (id: number): Promise<string> => {
-  const names = await getAllInvNames();
-  const match = names.find(({ itemID }) => itemID === id);
+const throwIfNamesNotLoaded = () => {
+  if (!invNames.length) {
+    throw new Error("Trying to use invNames before it was cached.");
+  }
+};
+
+const getNameById = (id: number): string => {
+  throwIfNamesNotLoaded();
+  const match = invNames.find(({ itemID }) => itemID === id);
 
   if (!match) {
     throw new Error(`Name not found for id ${id} in getNameById.`);

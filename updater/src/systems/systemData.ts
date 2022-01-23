@@ -60,8 +60,9 @@ const traverseUniverse = async (path: string): Promise<any> => {
             encoding: "utf8",
           }
         );
-        const region = parseYaml(regionYaml);
-        const { regionID, wormholeClassID } = region;
+        const regionData = parseYaml(regionYaml);
+        const { regionID, wormholeClassID } = regionData;
+        //const region = { id: regionID, name: "" };
         systems.push(
           ...(await traverseRegion(regionDir.path, regionID, wormholeClassID))
         );
