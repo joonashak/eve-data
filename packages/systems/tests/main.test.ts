@@ -10,6 +10,10 @@ test("Find by name", () => {
     id: 30000142,
     name: "Jita",
     regionId: 10000002,
+    region: {
+      id: 10000002,
+      name: "The Forge",
+    },
     securityClass: "HIGH",
     securityStatus: 0.9459131166648389,
     whClass: null,
@@ -79,6 +83,10 @@ test("Find by ID", () => {
       ],
     },
     regionId: 11000029,
+    region: {
+      id: 11000029,
+      name: "E-R00029",
+    },
     whClass: 5,
     staticConnections: ["E175"],
   });

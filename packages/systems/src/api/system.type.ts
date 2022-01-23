@@ -25,9 +25,25 @@ export type System = {
   effect: WormholeEffect | null;
 
   /**
-   * Region ESI ID.
+   * DEPRECATED! Please use `region.id` instead.
+   * This property will be removed in the next major version update.
    */
   regionId: number;
+
+  /**
+   * Region information.
+   */
+  region: {
+    /**
+     * Region ESI ID.
+     */
+    id: number;
+
+    /**
+     * Region name.
+     */
+    name: string;
+  };
 
   /**
    * Class (1-6) for wormhole systems
