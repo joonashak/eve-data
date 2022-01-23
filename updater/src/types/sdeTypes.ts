@@ -10,7 +10,7 @@ export type SdeSystem = {
 };
 
 export type SdeSystemExtended = SdeSystem & {
-  regionId: number;
+  region: { id: number; name: string };
   whClass: number;
 };
 

@@ -39,7 +39,7 @@ export default async (
   const effects = await wormholeEffects();
 
   return systems.map((system) => {
-    const { solarSystemID, security, secondarySun, regionId, whClass } = system;
+    const { solarSystemID, security, secondarySun, region, whClass } = system;
     const name = getNameById(solarSystemID);
     const securityClass = securityClassFromStatus(security);
     const effectId = secondarySun?.effectBeaconTypeID || null;
@@ -53,7 +53,9 @@ export default async (
       securityStatus: security,
       securityClass,
       effect,
-      regionId,
+      // FIXME: This should be deprecated in v3.
+      regionId: region.id,
+      region,
       // Some k-space systems have a wh class set in SDE...
       whClass: isWormhole ? whClass : null,
       staticConnections: getStatics(name),

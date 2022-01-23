@@ -3,6 +3,7 @@ import { resolve } from "path";
 import { parse as parseYaml } from "yaml";
 import config from "../config";
 import writeData from "../filesystem/writeData";
+import getNameById from "../invNames/getNameById";
 import formatSystems from "./formatSystems";
 
 /**
@@ -11,7 +12,7 @@ import formatSystems from "./formatSystems";
  */
 const traverseRegion = async (
   path: string,
-  regionId: number | null,
+  region: { id: number; name: string },
   whClass: number | null,
   systems: any[] = []
 ) => {
@@ -22,7 +23,7 @@ const traverseRegion = async (
     const direntPath = resolve(dir.path, dirent.name);
 
     if (dirent.isDirectory()) {
-      await traverseRegion(direntPath, regionId, whClass, systems);
+      await traverseRegion(direntPath, region, whClass, systems);
     }
 
     if (dirent.name === "solarsystem.staticdata") {
@@ -30,7 +31,7 @@ const traverseRegion = async (
       const content = parseYaml(
         await readFile(direntPath, { encoding: "utf8" })
       );
-      systems.push({ ...content, regionId, whClass });
+      systems.push({ ...content, region, whClass });
     }
   }
 
@@ -62,9 +63,9 @@ const traverseUniverse = async (path: string): Promise<any> => {
         );
         const regionData = parseYaml(regionYaml);
         const { regionID, wormholeClassID } = regionData;
-        //const region = { id: regionID, name: "" };
+        const region = { id: regionID, name: getNameById(regionID) };
         systems.push(
-          ...(await traverseRegion(regionDir.path, regionID, wormholeClassID))
+          ...(await traverseRegion(regionDir.path, region, wormholeClassID))
         );
       }
     }
