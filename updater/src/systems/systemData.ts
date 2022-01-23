@@ -3,39 +3,7 @@ import { resolve } from "path";
 import { parse as parseYaml } from "yaml";
 import config from "../config";
 import writeData from "../filesystem/writeData";
-import { SdeName, SdeSystem } from "../types/sdeTypes";
 import formatSystems from "./formatSystems";
-
-/**
- * Get the contents of the names file as an object where keys are itemID's and values
- * corresponding names. Use min and max to limit the range of ID's returned or wait for
- * this to finish until hell freezes over.
- */
-const namesById = async (min: number, max: number) => {
-  const itemsYaml = await readFile("sde/bsd/invNames.yaml", {
-    encoding: "utf8",
-  });
-  const items = parseYaml(itemsYaml).filter(
-    ({ itemID }: SdeName) => itemID >= min && itemID <= max
-  );
-
-  return items.reduce((names: any, { itemID, itemName }: SdeName) => {
-    // FIXME: Quick and dirty fix for a single system name that is correct in data but gets parsed as zero.
-    if (itemID === 30003270) {
-      itemName = "6E-578";
-    }
-    if (itemName === "0") {
-      throw new Error(`Parsing system name failed for ID ${itemID}`);
-    }
-    return Object.assign(names, { [itemID]: itemName });
-  }, {});
-};
-
-const getSystemNames = async (systems: SdeSystem[]) => {
-  const ids = systems.map(({ solarSystemID }) => solarSystemID);
-  const names = await namesById(Math.min(...ids), Math.max(...ids));
-  return names;
-};
 
 /**
  * Traverse the given directory recursively and return a list of planetary system data
@@ -58,6 +26,7 @@ const traverseRegion = async (
     }
 
     if (dirent.name === "solarsystem.staticdata") {
+      //console.log("solarsystem");
       const content = parseYaml(
         await readFile(direntPath, { encoding: "utf8" })
       );
@@ -110,7 +79,6 @@ export default async (): Promise<void> => {
   const kSpaceSystems = await traverseUniverse("sde/fsd/universe/eve");
   const wSpaceSystems = await traverseUniverse("sde/fsd/universe/wormhole");
   const systemsRaw = kSpaceSystems.concat(wSpaceSystems);
-  const names = await getSystemNames(systemsRaw);
-  const systems = await formatSystems(systemsRaw, names);
+  const systems = await formatSystems(systemsRaw);
   await writeData(config.dataFiles.systems.name, systems);
 };

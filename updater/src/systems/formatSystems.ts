@@ -1,4 +1,5 @@
 import wormholeStatics from "../../assets/wormholeStatics";
+import getNameById from "../invNames/getNameById";
 import { HolenavSystem } from "../types/holenavStaticDataTypes";
 import { SdeSystemExtended } from "../types/sdeTypes";
 import wormholeEffects from "../wormholeEffects/wormholeEffects";
@@ -33,30 +34,32 @@ const getStatics = (name: string): string[] => {
 };
 
 export default async (
-  systems: SdeSystemExtended[],
-  systemNames: any
+  systems: SdeSystemExtended[]
 ): Promise<HolenavSystem[]> => {
   const effects = await wormholeEffects();
 
-  return systems.map((system) => {
-    const { solarSystemID, security, secondarySun, regionId, whClass } = system;
-    const name = systemNames[solarSystemID];
-    const securityClass = securityClassFromStatus(security);
-    const effectId = secondarySun?.effectBeaconTypeID || null;
-    const effect = effectId ? effects[effectId.toString()] : null;
+  return Promise.all(
+    systems.map(async (system) => {
+      const { solarSystemID, security, secondarySun, regionId, whClass } =
+        system;
+      const name = await getNameById(solarSystemID);
+      const securityClass = securityClassFromStatus(security);
+      const effectId = secondarySun?.effectBeaconTypeID || null;
+      const effect = effectId ? effects[effectId.toString()] : null;
 
-    const isWormhole = securityClass === SecurityClass.Wormhole;
+      const isWormhole = securityClass === SecurityClass.Wormhole;
 
-    return {
-      name,
-      id: solarSystemID,
-      securityStatus: security,
-      securityClass,
-      effect,
-      regionId,
-      // Some k-space systems have a wh class set in SDE...
-      whClass: isWormhole ? whClass : null,
-      staticConnections: getStatics(name),
-    };
-  });
+      return {
+        name,
+        id: solarSystemID,
+        securityStatus: security,
+        securityClass,
+        effect,
+        regionId,
+        // Some k-space systems have a wh class set in SDE...
+        whClass: isWormhole ? whClass : null,
+        staticConnections: getStatics(name),
+      };
+    })
+  );
 };
