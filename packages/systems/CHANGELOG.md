@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v2.2.2 (2022-01-27)
+
+### Fixes
+
+- Fixed some nullsec system having `"WH"` as their `securityClass`.
+- Removed `whClass` number from those nullsec systems that have it set in the SDE.
+
 ## v2.2.1 (2022-01-23)
 
 ### Additions
