@@ -4,10 +4,12 @@ import { parse as parseYaml } from "yaml";
 import getNameById from "../invNames/getNameById";
 import { Constellation } from "./parseConstellations";
 
-type System = {
-  id: string;
+export type System = {
+  id: number;
   name: string;
   constellation: Constellation;
+  securityStatus: number;
+  secondarySun: { effectBeaconTypeID: number } | null;
 };
 
 const parseSystems = async (
@@ -30,12 +32,14 @@ const parseSystems = async (
       encoding: "utf8",
     });
     const systemData = parseYaml(systemYaml);
-    const { solarSystemID } = systemData;
+    const { solarSystemID, security, secondarySun } = systemData;
 
     const system = {
       id: solarSystemID,
       name: getNameById(solarSystemID),
       constellation,
+      securityStatus: security,
+      secondarySun,
     };
     systems.push(system);
   }
