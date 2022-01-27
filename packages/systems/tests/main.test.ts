@@ -35,7 +35,7 @@ test("Find by ID", () => {
     effect: {
       id: "30853",
       name: "Black Hole",
-      whClass: 5,
+      effectClass: 5,
       traits: [
         {
           strength: 43,

@@ -25,14 +25,14 @@ export default async (): Promise<any> => {
 
   const effects = Object.entries(effectsRaw).reduce(
     (acc: any, [key, val]: any) => {
-      const whClass = Number(val.name.en.match(/[1-6]/));
+      const effectClass = Number(val.name.en.match(/[1-6]/));
       const name = val.name.en
         .replace(/ Effects$/, "")
         .replace(/^Class [1-6] /, "");
       acc[key] = {
         id: key,
         name,
-        whClass,
+        effectClass,
         traits: parseTraits(val.traits),
       };
       return acc;

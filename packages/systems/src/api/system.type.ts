@@ -90,7 +90,7 @@ export type WormholeEffect = {
   /**
    * Effect class (1-6).
    */
-  whClass: 1 | 2 | 3 | 4 | 5 | 6;
+  effectClass: 1 | 2 | 3 | 4 | 5 | 6;
 
   /**
    * List of the effect's traits, that is, the actual effects on your ship.
