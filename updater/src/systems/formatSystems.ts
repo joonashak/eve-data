@@ -37,7 +37,6 @@ const getStatics = (name: string): string[] => {
 
 const formatRegion = ({ id, name }: Region) => ({ id, name });
 
-// TODO: Check Thera.
 // TODO: Check C13 systems.
 // TODO: Handle special wh systems.
 // TODO: Add constellation data.
