@@ -45,6 +45,21 @@ export type System = {
   };
 
   /**
+   * Constellation information.
+   */
+  constellation: {
+    /**
+     * Constellation ESI ID.
+     */
+    id: number;
+
+    /**
+     * Constellation name.
+     */
+    name: string;
+  };
+
+  /**
    * Wormhole class.
    * - 1-6 for standard wormhole systems.
    * - 12 for Thera.

@@ -9,9 +9,14 @@ test("Find by name", () => {
     effect: null,
     id: 30000142,
     name: "Jita",
+    secondaryName: null,
     region: {
       id: 10000002,
       name: "The Forge",
+    },
+    constellation: {
+      id: 20000020,
+      name: "Kimotoro",
     },
     securityClass: "HIGH",
     securityStatus: 0.9459131166648389,
@@ -23,6 +28,7 @@ test("Find by name", () => {
 test("Find by ID", () => {
   expect(findOneSystem({ id: 31002338 })).toEqual({
     name: "J210519",
+    secondaryName: null,
     id: 31002338,
     securityStatus: -0.99,
     securityClass: "WH",
@@ -84,6 +90,10 @@ test("Find by ID", () => {
     region: {
       id: 11000029,
       name: "E-R00029",
+    },
+    constellation: {
+      id: 21000293,
+      name: "E-C00293",
     },
     whClass: 5,
     staticConnections: ["E175"],

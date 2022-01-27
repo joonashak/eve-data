@@ -2,6 +2,7 @@ import drifterWhSystems from "../../assets/drifterWhSystems";
 import wormholeStatics from "../../assets/wormholeStatics";
 import { HolenavSystem } from "../types/holenavStaticDataTypes";
 import wormholeEffects from "../wormholeEffects/wormholeEffects";
+import { Constellation } from "./parseConstellations";
 import { Region } from "./parseRegions";
 import { System } from "./parseSystems";
 
@@ -52,8 +53,8 @@ const getSecondaryName = (name: string): string | null => {
 };
 
 const formatRegion = ({ id, name }: Region) => ({ id, name });
+const formatConstellation = ({ id, name }: Constellation) => ({ id, name });
 
-// TODO: Add constellation data.
 const formatSystems = async (systems: System[]): Promise<HolenavSystem[]> => {
   const effects = await wormholeEffects();
 
@@ -74,6 +75,7 @@ const formatSystems = async (systems: System[]): Promise<HolenavSystem[]> => {
       securityClass,
       effect,
       region: formatRegion(region),
+      constellation: formatConstellation(constellation),
       whClass,
       staticConnections: getStatics(name),
     };

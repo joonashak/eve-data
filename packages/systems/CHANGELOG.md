@@ -11,6 +11,7 @@
 ### Additions
 
 - Added drifter wormhole informal names (Conflux, Vidette, etc.) as `secondaryName`.
+- Added constellation data as `constellation`.
 
 ### Fixes
 
