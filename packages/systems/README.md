@@ -23,14 +23,18 @@ console.log(systems);
 // [
 //     {
 //         "name": "TXW-EI",
+//         "secondaryName": null,
 //         "id": 30003323,
 //         "securityStatus": -0.01311255977769577,
 //         "securityClass": "NULL",
 //         "effect": null,
-//         "regionId": 10000041,
 //         "region": {
 //             "id": 10000041,
 //             "name": "Syndicate"
+//         },
+//        "constellation": {
+//             "id": 20000484,
+//             "name": "YFN-UN"
 //         },
 //         "whClass": null,
 //         "staticConnections": []
@@ -61,7 +65,7 @@ try {
 
 Wormhole effects are included for non-vanilla systems.
 
-The `strength` values are signed to make them more sensible. The signs reflect the effect particular trait will have on an attribute of a ship or a module. This should be rather straightforward in all except the agility/inertia case (part of the Black Hole effect): The SDE's description talks about "ship agility", however, there is no such an attribute in the game. The correct attribute here is _ship inertia_ which has the opposite sign to "agility". Therefore I have left the `strength` value positive as the effect increases ship inertia. The long description is left as is ("Penalty to ship agility") but the short one is "Ship Inertia".
+The `strength` values are signed to make them more sensible. The signs reflect the effect particular trait will have on an attribute of a ship or a module. This should be rather straightforward in all except the agility/inertia case (part of the Black Hole effect): The SDE's description talks about "ship agility", however, there is no such attribute in the game. The correct attribute here is _ship inertia_ which has the opposite sign to "agility". Therefore I have left the `strength` value positive as the effect increases ship inertia. The long description is left as is ("Penalty to ship agility") but the short one is "Ship Inertia".
 
 The `isPositive` booleans come straight from the SDE and appear to indicate whether the particular trait is considered beneficial to capsuleers or not. They might be slightly ambiguous at times but are often used to color the traits in UI's so I wanted to include them.
 
@@ -72,7 +76,7 @@ console.log(wh.effect);
 //        {
 //            "id": "30867",
 //            "name": "Pulsar",
-//            "whClass": 4,
+//            "effectClass": 4,
 //            "traits": [
 //                {
 //                    "strength": -36,

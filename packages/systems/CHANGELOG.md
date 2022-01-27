@@ -1,12 +1,13 @@
 # CHANGELOG
 
-## Next Version (Pending Release)
+## v3.0.0 (2022-01-27)
 
 ### Breaking Changes
 
 - Added classes 14-18 to `System.whClass` type.
 - Removed class 25 (Pochven) from `System.whClass` type as Pochven is not a wormhole region and Pochven systems can be identified using `System.region`.
 - Removed deprecated `regionId` property as duplicate of `region.id`.
+- Renamed `System.effect.whClass` property to `effectClass` to avoid confusion with `System.whClass`.
 
 ### Additions
 
