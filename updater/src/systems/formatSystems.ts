@@ -1,3 +1,4 @@
+import drifterWhSystems from "../../assets/drifterWhSystems";
 import wormholeStatics from "../../assets/wormholeStatics";
 import { HolenavSystem } from "../types/holenavStaticDataTypes";
 import wormholeEffects from "../wormholeEffects/wormholeEffects";
@@ -35,9 +36,23 @@ const getStatics = (name: string): string[] => {
   return [];
 };
 
+const getWhClass = (name: string, region: Region): number | null => {
+  if (Object.keys(drifterWhSystems).includes(name)) {
+    return drifterWhSystems[name as keyof typeof drifterWhSystems].whClass;
+  }
+  return region.whClass;
+};
+
+const getSecondaryName = (name: string): string | null => {
+  if (Object.keys(drifterWhSystems).includes(name)) {
+    return drifterWhSystems[name as keyof typeof drifterWhSystems]
+      .secondaryName;
+  }
+  return null;
+};
+
 const formatRegion = ({ id, name }: Region) => ({ id, name });
 
-// TODO: Handle special wh systems.
 // TODO: Add constellation data.
 const formatSystems = async (systems: System[]): Promise<HolenavSystem[]> => {
   const effects = await wormholeEffects();
@@ -45,13 +60,15 @@ const formatSystems = async (systems: System[]): Promise<HolenavSystem[]> => {
   return systems.map((system) => {
     const { id, name, securityStatus, secondarySun, constellation } = system;
     const { region } = constellation;
-    const { whClass } = region;
+    const whClass = getWhClass(name, region);
     const securityClass = getSecurityClass(securityStatus, whClass);
     const effectId = secondarySun?.effectBeaconTypeID || null;
     const effect = effectId ? effects[effectId.toString()] : null;
+    const secondaryName = getSecondaryName(name);
 
     return {
       name,
+      secondaryName,
       id,
       securityStatus,
       securityClass,

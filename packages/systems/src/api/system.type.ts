@@ -5,6 +5,11 @@ export type System = {
   name: string;
 
   /**
+   * Informal name for drifter wormhole systems (Vidette, Conflux, etc.).
+   */
+  secondaryName: string | null;
+
+  /**
    * System ESI ID.
    */
   id: number;
@@ -46,13 +51,14 @@ export type System = {
   };
 
   /**
-   * Class (1-6) for wormhole systems
-   * Class 12 for Thera
-   * Class 13 for Shattered systems
-   * Class 25 for Pochven
-   * `null` for others.
+   * Wormhole class.
+   * - 1-6 for standard wormhole systems.
+   * - 12 for Thera.
+   * - 13 for small-ship shattered systems.
+   * - 14-18 for drifter wormhole systems.
+   * - `null` for others.
    */
-  whClass: 1 | 2 | 3 | 4 | 5 | 6 | 12 | 13 | 25 | null;
+  whClass: 1 | 2 | 3 | 4 | 5 | 6 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | null;
 
   /**
    * Static connections of a wormhole system.

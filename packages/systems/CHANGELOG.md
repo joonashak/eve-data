@@ -2,9 +2,19 @@
 
 ## Next Version (Pending Release)
 
+### Breaking Changes
+
+- Added classes 14-18 to `System.whClass` type.
+- Removed class 25 (Pochven) from `System.whClass` type as Pochven is not a wormhole region and Pochven systems can be identified using `System.region`.
+
+### Additions
+
+- Added drifter wormhole informal names (Conflux, Vidette, etc.) as `secondaryName`.
+
 ### Fixes
 
-- Add missing static connections to Thera.
+- Added missing static connections to Thera.
+- Fixed drifter wormhole classes to be 14-18 (all were previously class 1 as in SDE).
 
 ## v2.2.2 (2022-01-27)
 
