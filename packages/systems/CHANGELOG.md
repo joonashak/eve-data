@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v3.1.0 (2022-01-27)
+
+### Fixes
+
+- Removed 230 inaccessible Jovian systems. Total system count is now 7805 which matches what CCP have said about the number of reachable systems in game.
+
 ## v3.0.0 (2022-01-27)
 
 ### Breaking Changes

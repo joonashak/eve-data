@@ -4,6 +4,8 @@ Static data for all EVE Online star systems. The data is sourced from EVE Static
 
 This library can be used in browsers as well as with Node. The data gzips well which offers a viable alternative for fetching static data from an API during runtime (less than 150 KB gzipped).
 
+Abyssal and Jovian systems are not included in this package. (If you have a use case for Abyssal systems, let me know. They should be quite easy to add if there is a strong case for including them in this dataset.)
+
 ## The `@eve-data` project
 
 This library is a part of the [`@eve-data` project](https://github.com/joonashak/eve-data), please see the top-level [README](https://github.com/joonashak/eve-data#readme) for more general information.

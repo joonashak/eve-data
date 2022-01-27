@@ -1,6 +1,7 @@
 import { opendir, readFile } from "fs/promises";
 import { resolve } from "path";
 import { parse as parseYaml } from "yaml";
+import jovianRegions from "../../assets/jovianRegions";
 import getNameById from "../invNames/getNameById";
 
 export type Region = {
@@ -27,10 +28,16 @@ const parseRegions = async (
     const regionYaml = await readFile(regionFilePath, { encoding: "utf8" });
     const regionData = parseYaml(regionYaml);
     const { regionID, wormholeClassID } = regionData;
+    const name = getNameById(regionID);
+
+    // Ignore inaccesible Jovian regions.
+    if (jovianRegions.includes(name)) {
+      continue;
+    }
 
     const region = {
       id: regionID,
-      name: getNameById(regionID),
+      name,
       path: regionPath,
       whClass: isAnoikis ? wormholeClassID : null,
     };

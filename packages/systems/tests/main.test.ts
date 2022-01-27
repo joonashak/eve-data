@@ -1,7 +1,7 @@
 import systems, { findOneSystem } from "../src/main";
 
 test("Number of systems", () => {
-  expect(systems.length).toBe(8035);
+  expect(systems.length).toBe(7805);
 });
 
 test("Find by name", () => {
