@@ -1,8 +1,6 @@
 export type SystemType = {
-  // FIXME: This does not work?!
-  // type: "HIGH" | "LOW" | "NULL" | "WH" | "TRIG" | "THERA";
-  type: string | "HIGH" | "LOW" | "NULL" | "WH" | "TRIG" | "THERA";
-  whClass: number | null;
+  type: "HIGH" | "LOW" | "NULL" | "WH" | "TRIG" | "THERA";
+  whClass: 1 | 2 | 3 | 4 | 5 | 6 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | null;
 };
 
 export type Wormhole = {
