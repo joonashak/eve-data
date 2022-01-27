@@ -73,8 +73,6 @@ const formatSystems = async (systems: System[]): Promise<HolenavSystem[]> => {
       securityStatus,
       securityClass,
       effect,
-      // FIXME: This should be deprecated in v3.
-      regionId: region.id,
       region: formatRegion(region),
       whClass,
       staticConnections: getStatics(name),

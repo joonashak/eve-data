@@ -30,12 +30,6 @@ export type System = {
   effect: WormholeEffect | null;
 
   /**
-   * DEPRECATED! Please use `region.id` instead.
-   * This property will be removed in the next major version update.
-   */
-  regionId: number;
-
-  /**
    * Region information.
    */
   region: {
