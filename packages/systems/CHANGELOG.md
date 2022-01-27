@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Next Version (Pending Release)
+
+### Fixes
+
+- Add missing static connections to Thera.
+
 ## v2.2.2 (2022-01-27)
 
 ### Fixes
