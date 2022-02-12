@@ -9,7 +9,7 @@ Static data from the game [EVE Online](https://www.eveonline.com/), offered as a
 Name|Description|Current Version
 -|-|-
 [`@eve-data/systems`](https://www.npmjs.com/package/@eve-data/systems)|Star system data for all reachable systems in game.|`3.1.0`
-[`@eve-data/wormholes`](https://www.npmjs.com/package/@eve-data/wormholes)|Wormhole properties. _(Experimental.)_|`0.0.6`
+[`@eve-data/wormholes`](https://www.npmjs.com/package/@eve-data/wormholes)|Wormhole properties. _(Experimental.)_|`0.0.7`
 
 ## Contributing
 
