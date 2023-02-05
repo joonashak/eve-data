@@ -32,36 +32,16 @@
                 "whClass": 6
             },
             {
-                "type": "WH",
-                "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
                 "type": "THERA",
                 "whClass": 12
+            },
+            {
+                "type": "WH",
+                "whClass": 13
             }
         ],
         "mass": {
-            "total": 500000000,
+            "total": 3000000000,
             "jump": 5000000
         }
     },
@@ -112,6 +92,10 @@
             {
                 "type": "WH",
                 "whClass": 3
+            },
+            {
+                "type": "THERA",
+                "whClass": 12
             }
         ],
         "mass": {
@@ -192,7 +176,7 @@
         ],
         "mass": {
             "total": 3000000000,
-            "jump": 1350000000
+            "jump": 1000000000
         }
     },
     {
@@ -223,7 +207,7 @@
     },
     {
         "type": "C008",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 4.5,
         "destination": {
             "type": "WH",
             "whClass": 5
@@ -254,36 +238,16 @@
                 "whClass": 6
             },
             {
-                "type": "WH",
-                "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
                 "type": "THERA",
                 "whClass": 12
+            },
+            {
+                "type": "WH",
+                "whClass": 13
             }
         ],
         "mass": {
-            "total": 1000000000,
+            "total": 3000000000,
             "jump": 5000000
         }
     },
@@ -343,7 +307,7 @@
     },
     {
         "type": "C248",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 24,
         "destination": {
             "type": "NULL",
             "whClass": null
@@ -373,8 +337,8 @@
             }
         ],
         "mass": {
-            "total": 3000000000,
-            "jump": 1000000000
+            "total": 3300000000,
+            "jump": 2000000000
         }
     },
     {
@@ -422,11 +386,15 @@
             {
                 "type": "NULL",
                 "whClass": null
+            },
+            {
+                "type": "TRIG",
+                "whClass": null
             }
         ],
         "mass": {
             "total": 1000000000,
-            "jump": 410000000
+            "jump": 1000000000
         }
     },
     {
@@ -503,7 +471,7 @@
     },
     {
         "type": "E004",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 4.5,
         "destination": {
             "type": "WH",
             "whClass": 1
@@ -534,36 +502,16 @@
                 "whClass": 6
             },
             {
-                "type": "WH",
-                "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
                 "type": "THERA",
                 "whClass": 12
+            },
+            {
+                "type": "WH",
+                "whClass": 13
             }
         ],
         "mass": {
-            "total": 1000000000,
+            "total": 3000000000,
             "jump": 5000000
         }
     },
@@ -636,6 +584,18 @@
             {
                 "type": "WH",
                 "whClass": 3
+            },
+            {
+                "type": "WH",
+                "whClass": 4
+            },
+            {
+                "type": "WH",
+                "whClass": 5
+            },
+            {
+                "type": "WH",
+                "whClass": 6
             }
         ],
         "mass": {
@@ -651,10 +611,6 @@
             "whClass": null
         },
         "origins": [
-            {
-                "type": "WH",
-                "whClass": 1
-            },
             {
                 "type": "WH",
                 "whClass": 2
@@ -674,34 +630,6 @@
             {
                 "type": "WH",
                 "whClass": 6
-            },
-            {
-                "type": "WH",
-                "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
-                "type": "THERA",
-                "whClass": 12
             }
         ],
         "mass": {
@@ -729,7 +657,7 @@
     },
     {
         "type": "G008",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 4.5,
         "destination": {
             "type": "WH",
             "whClass": 6
@@ -762,34 +690,10 @@
             {
                 "type": "WH",
                 "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
-                "type": "THERA",
-                "whClass": 12
             }
         ],
         "mass": {
-            "total": 1000000000,
+            "total": 3000000000,
             "jump": 5000000
         }
     },
@@ -876,6 +780,10 @@
             {
                 "type": "WH",
                 "whClass": 3
+            },
+            {
+                "type": "THERA",
+                "whClass": 12
             }
         ],
         "mass": {
@@ -902,21 +810,33 @@
         }
     },
     {
-        "type": "K329",
-        "lifetimeHrs": 16,
+        "type": "J377",
+        "lifetimeHrs": 24,
         "destination": {
-            "type": "NULL",
+            "type": "LOW",
             "whClass": null
         },
         "origins": [
+            {
+                "type": "WH",
+                "whClass": 1
+            },
+            {
+                "type": "WH",
+                "whClass": 2
+            },
+            {
+                "type": "WH",
+                "whClass": 3
+            },
             {
                 "type": "WH",
                 "whClass": 4
             }
         ],
         "mass": {
-            "total": 5000000000,
-            "jump": 1800000000
+            "total": 1000000000,
+            "jump": 62000000
         }
     },
     {
@@ -939,7 +859,7 @@
     },
     {
         "type": "L005",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 4.5,
         "destination": {
             "type": "WH",
             "whClass": 2
@@ -970,36 +890,16 @@
                 "whClass": 6
             },
             {
-                "type": "WH",
-                "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
                 "type": "THERA",
                 "whClass": 12
+            },
+            {
+                "type": "WH",
+                "whClass": 13
             }
         ],
         "mass": {
-            "total": 1000000000,
+            "total": 3000000000,
             "jump": 5000000
         }
     },
@@ -1059,7 +959,7 @@
     },
     {
         "type": "M001",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 4.5,
         "destination": {
             "type": "WH",
             "whClass": 4
@@ -1090,36 +990,16 @@
                 "whClass": 6
             },
             {
-                "type": "WH",
-                "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
                 "type": "THERA",
                 "whClass": 12
+            },
+            {
+                "type": "WH",
+                "whClass": 13
             }
         ],
         "mass": {
-            "total": 1000000000,
+            "total": 3000000000,
             "jump": 5000000
         }
     },
@@ -1138,7 +1018,7 @@
         ],
         "mass": {
             "total": 2000000000,
-            "jump": 375000000
+            "jump": 1000000000
         }
     },
     {
@@ -1232,24 +1112,6 @@
         }
     },
     {
-        "type": "N290",
-        "lifetimeHrs": 24,
-        "destination": {
-            "type": "LOW",
-            "whClass": null
-        },
-        "origins": [
-            {
-                "type": "WH",
-                "whClass": 4
-            }
-        ],
-        "mass": {
-            "total": 3000000000,
-            "jump": 1800000000
-        }
-    },
-    {
         "type": "N432",
         "lifetimeHrs": 24,
         "destination": {
@@ -1300,6 +1162,10 @@
             {
                 "type": "WH",
                 "whClass": 3
+            },
+            {
+                "type": "THERA",
+                "whClass": 12
             }
         ],
         "mass": {
@@ -1340,36 +1206,14 @@
             {
                 "type": "WH",
                 "whClass": 3
+            },
+            {
+                "type": "THERA",
+                "whClass": 12
             }
         ],
         "mass": {
             "total": 2000000000,
-            "jump": 375000000
-        }
-    },
-    {
-        "type": "O128",
-        "lifetimeHrs": 24,
-        "destination": {
-            "type": "WH",
-            "whClass": 4
-        },
-        "origins": [
-            {
-                "type": "HIGH",
-                "whClass": null
-            },
-            {
-                "type": "LOW",
-                "whClass": null
-            },
-            {
-                "type": "NULL",
-                "whClass": null
-            }
-        ],
-        "mass": {
-            "total": 1000000000,
             "jump": 375000000
         }
     },
@@ -1429,7 +1273,7 @@
     },
     {
         "type": "Q003",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 4.5,
         "destination": {
             "type": "NULL",
             "whClass": null
@@ -1460,36 +1304,16 @@
                 "whClass": 6
             },
             {
-                "type": "WH",
-                "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
                 "type": "THERA",
                 "whClass": 12
+            },
+            {
+                "type": "WH",
+                "whClass": 13
             }
         ],
         "mass": {
-            "total": 1000000000,
+            "total": 3000000000,
             "jump": 5000000
         }
     },
@@ -1636,26 +1460,8 @@
         }
     },
     {
-        "type": "S047",
-        "lifetimeHrs": 24,
-        "destination": {
-            "type": "HIGH",
-            "whClass": null
-        },
-        "origins": [
-            {
-                "type": "WH",
-                "whClass": 4
-            }
-        ],
-        "mass": {
-            "total": 3000000000,
-            "jump": 375000000
-        }
-    },
-    {
         "type": "S199",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 24,
         "destination": {
             "type": "NULL",
             "whClass": null
@@ -1730,6 +1536,10 @@
             {
                 "type": "WH",
                 "whClass": 3
+            },
+            {
+                "type": "THERA",
+                "whClass": 12
             }
         ],
         "mass": {
@@ -1860,6 +1670,10 @@
             {
                 "type": "WH",
                 "whClass": 3
+            },
+            {
+                "type": "THERA",
+                "whClass": 12
             }
         ],
         "mass": {
@@ -1900,7 +1714,7 @@
         ],
         "mass": {
             "total": 2000000000,
-            "jump": 375000000
+            "jump": 1000000000
         }
     },
     {
@@ -2065,7 +1879,7 @@
     },
     {
         "type": "Z006",
-        "lifetimeHrs": 16,
+        "lifetimeHrs": 4.5,
         "destination": {
             "type": "WH",
             "whClass": 3
@@ -2096,36 +1910,16 @@
                 "whClass": 6
             },
             {
-                "type": "WH",
-                "whClass": 13
-            },
-            {
-                "type": "WH",
-                "whClass": 14
-            },
-            {
-                "type": "WH",
-                "whClass": 15
-            },
-            {
-                "type": "WH",
-                "whClass": 16
-            },
-            {
-                "type": "WH",
-                "whClass": 17
-            },
-            {
-                "type": "WH",
-                "whClass": 18
-            },
-            {
                 "type": "THERA",
                 "whClass": 12
+            },
+            {
+                "type": "WH",
+                "whClass": 13
             }
         ],
         "mass": {
-            "total": 1000000000,
+            "total": 3000000000,
             "jump": 5000000
         }
     },
