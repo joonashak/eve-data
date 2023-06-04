@@ -950,6 +950,10 @@
             {
                 "type": "WH",
                 "whClass": 1
+            },
+            {
+                "type": "NULL",
+                "whClass": null
             }
         ],
         "mass": {
